@@ -118,9 +118,9 @@ To train the model, I used following conditions.
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy = 0.994
-* validation set accuracy = 0.964
-* test set accuracy = 0.952
+* training set accuracy = 0.992
+* validation set accuracy = 0.968
+* test set accuracy = 0.956
 
 What I chose as the first architecture was LeNet which was the same as the lecture.
 Validation set accuracy was a little lower than 0.93 because overfitting might happen.  
@@ -150,16 +150,16 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | Road work      		| Road work   									|
-| Stop     			| End of no passing 										|
-| General caution					| Keep right											|
-| Speed limit(30km/h)	      		| Speed limit(80km/h)					 				|
-| Roundabout mandatory			| Priority road      							|
+| Stop     			| Stop 										|
+| General caution					| Bicycles crossing											|
+| Speed limit(30km/h)	      		| Go straight or right					 				|
+| Roundabout mandatory			| Keep right      							|
 | Turn right ahead			| Turn right ahead      							|
-| Speed limit(70km/h)			| Ahead only      							|
+| Speed limit(70km/h)			| Speed limit(30km/h)      							|
 | Right-of-way at the next intersection			| Right-of-way at the next intersection      							|
 
 
-The model was able to correctly guess 3 of the 8 traffic signs, which gives an accuracy of 37.5%. This compares not favorably to the accuracy on the test set of 95.2%. This results are too smaller than expected. Maybe images from web is too difficult for my network.  
+The model was able to correctly guess 4 of the 8 traffic signs, which gives an accuracy of 50%. This compares not favorably to the accuracy on the test set of 95.6%. This results are too smaller than expected. Maybe images from web is too difficult for my network.  
 If I augmented images by such as scaling, perspecting, it would be got better result.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
@@ -167,23 +167,22 @@ If I augmented images by such as scaling, perspecting, it would be got better re
 For the first image, the model is definitely sure that this is a Road work and the image is Road work.
 ![alt text][image6]
 
-For the second image, the model is relatively sure that this is a End of no passing, but the image is Stop.
-That may be because when image were resized to 32x32, "STOP" picture made to be unclear.
+For the second image, the model is relatively sure that this is a Stop, and the image is Stop.
 ![alt text][image7]
 
-For the 3rd image, the model is relatively sure that this is a Keep right, but the image is General caution. That may be because this image is perspectived and triangle feature is relatively small.
+For the 3rd image, the model is relatively sure that this is a Bicycles crossing, but the image is General caution. That may be because this image is perspectived and triangle feature is relatively small.
 ![alt text][image8]
 
-For the 4th image, the model is relatively sure that this is a Speed limit(80km/h), but the image is 30km/h. That may be because number 3 and number 8 are relatively similar.
+For the 4th image, the model is relatively uncertain that this is a Go straight or right, but the image is 30km/h. That may be because web image is not clear.
 ![alt text][image9]
 
-For the 5th image, the model is relatively sure that this is a Priority road, but the image is Roundabout mandatory. The probability of 5th is Roundabout mandatory, so if increasing the number of Roundabout mandatory test set, it might be predicted as Roundabout mandatory.
+For the 5th image, the model is relatively uncertain that this is a keep right, but the image is Roundabout mandatory. The probability of 5th is Roundabout mandatory, so if increasing the number of Roundabout mandatory test set, it might be predicted as Roundabout mandatory.
 ![alt text][image10]
 
-For the 6th image, the model is relatively sure that this is a Turn right ahead, and the image is Turn right ahead.  
+For the 6th image, the model is definitely sure that this is a Turn right ahead, and the image is Turn right ahead.  
 ![alt text][image11]
 
-For the 7th image, the model is relatively sure that this is a Ahead only, but the image is Speed limit(70km/h). That may be because this image is not square and sign is small, so when resized to 32x32 it is difficult to see as Speed limit(70km/h) even if by human.  
+For the 7th image, the model is relatively uncertain that this is a Speed limit(30km/h), but the image is Speed limit(70km/h). That may be because this image is not square and sign is small, so when resized to 32x32 it is difficult to see as Speed limit(70km/h) even if by human.  
 ![alt text][image12]
 
 For the 8th image, the model is definitely sure that this is a Right-of-way at the next intersection and the image is Right-of-way at the next intersection.  
