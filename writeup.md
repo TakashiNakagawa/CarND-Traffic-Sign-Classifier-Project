@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 [image0]: ./report_images/all_images.png "Visualization"
 [image1]: ./report_images/dataset_chart.png "Visualization"
 [image2]: ./report_images/grayscale.png "Grayscaling"
+[image_rt]: ./report_images/rotate_translate.png "Rotate translate"
 [image3]: ./report_images/increase.png "Increase"
 <!-- [image3]: ./examples/random_noise.jpg "Random Noise" -->
 [image4]: ./report_images/learning.png "Learning"
@@ -67,9 +68,7 @@ We can see that the number varies depending on the class.
 As a first step, I decided to increase images and convert images by two ways.  
 One is to rotate the images and two is to translate the images because training set images are well centered and not rotated.  
 
-rotate example  
-
-translate example  
+![alt text][image_rt]
 
 Below shows that training images are increased 3 times.
 
