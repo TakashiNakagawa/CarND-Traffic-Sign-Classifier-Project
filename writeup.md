@@ -184,7 +184,7 @@ For the 5th image, the model is relatively sure that this is a Priority road, bu
 For the 6th image, the model is relatively sure that this is a Turn right ahead, and the image is Turn right ahead.  
 ![alt text][image11]
 
-For the 7th image, the model is relatively sure that this is a Ahead only, but the image is Speed limit(70km/h). That may be because this image is not square and sign is small, so when resized to 32x32 it is difficult to see as Speed limit(70km/h) even if by human.
+For the 7th image, the model is relatively sure that this is a Ahead only, but the image is Speed limit(70km/h). That may be because this image is not square and sign is small, so when resized to 32x32 it is difficult to see as Speed limit(70km/h) even if by human.  
 ![alt text][image12]
 
 For the 8th image, the model is definitely sure that this is a Right-of-way at the next intersection and the image is Right-of-way at the next intersection.  
