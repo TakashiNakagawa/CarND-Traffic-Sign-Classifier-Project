@@ -65,17 +65,17 @@ We can see that the number varies depending on the class.
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to increase images and convert images by two ways.  
-One is to rotate the images and two is to translate the images, because training set images are well centered and not rotated.  
+One is to rotate the images and two is to translate the images because training set images are well centered and not rotated.  
 
 rotate example  
 
 translate example  
 
-Below shows that training images are incresed 3 times.
+Below shows that training images are increased 3 times.
 
 ![alt text][image3]
 
-As a second step, I decided to convert images to grayscale and normalize because that are thought to be more robust.
+As a second step, I decided to convert images to grayscale and normalize because that is thought to be more robust.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
@@ -125,11 +125,11 @@ My final model results were:
 
 What I chose as the first architecture was LeNet which was the same as the lecture.
 Validation set accuracy was a little lower than 0.93 because overfitting might happen.  
-So I decided to add dropout layers which increased validation accuracy. Maybe thanks to prohibit overfitting and ensemble effect.  
+So I decided to add dropout layers which increased validation accuracy. Maybe thanks to prohibiting overfitting and ensemble effect.  
 Then I decided to increase training data set because images in some classes were a few numbers.
 I also changed a learning rate, but under 0.001 made learning slow and above 0.001 made learning unstable.  
 
-I thought epochs 30 and epochs 50 made almost no difference by plotting graph below, but tain accuracy and train loss were slightly well than epoch 30, so I dedided epochs as 50.  
+I thought epochs 30 and epochs 50 made almost no difference by plotting graph below, but train accuracy and train loss were slightly well than epoch 30, so I decided epochs as 50.  
 ![alt text][image4]  
 
 
@@ -142,7 +142,7 @@ Here are five German traffic signs that I found on the web:
 
 ![alt text][image5]
 
-Stop, General caution, Speed limit(70km/h) might be difficult to predict because it was not clear, small, or perspectived.
+Stop, General caution, Speed limit(70km/h) might be difficult to predict because it was not clear, small, or perspective.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
