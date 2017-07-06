@@ -104,6 +104,7 @@ My final model consisted of the following layers:
 | Dropout					|	probability = 0.5											|
 | Fully connected		| outputs 43        									|
 
+This model was inspired by LeNet architecture and I added two Dropout layers from original.
 
 ### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -136,12 +137,35 @@ I thought epochs 30 and epochs 50 made almost no difference by plotting graph be
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:  
+Here are 8 German traffic signs that I found on the web:  
 (resized to 32x32 because my network handled that size.)  
 
 ![alt text][image5]
 
-Stop, General caution, Speed limit(70km/h) might be difficult to predict because it was not clear, small, or perspective.
+1. A Road work image.
+This image might be difficult because the aspect ratio is not 1.0. My model was not trained scaling images.
+
+2. A Stop image.
+This image might be difficult because the sign was not centered.
+
+3. A General caution image.
+This image might be difficult because the sign was perspectives and triangle feature was relatively small.
+
+4. A Speed limit(30km/h) image.
+This image might be difficult because the sign was not centered and a little small.
+
+5. A 40 Roundabout mandatory image.
+This image might be difficult because unrelated pictures (was it ham or bacon?) were on the sign.
+
+6. A Turn right ahead image.
+This image might be difficult because the sign was a little small and background color was similar to the sign.
+
+7. A Speed limit(70km/h) image.
+This image might be difficult because the sign was too small and not centered.
+
+8. A Right-of-way at the next intersection image.
+This image might be difficult because the contrast was a little low.
+
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
